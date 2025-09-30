@@ -56,20 +56,20 @@ function checkBtn(idx){
     if(userSeq[idx] === gameSeq[idx]){
         if(userSeq.length == gameSeq.length){
             // levelUp();
-            setTimeout(levelUp(),200);
+            setTimeout(levelUp,200);
         }
     } else{
         let body = document.querySelector("body");
         body.classList.add("over");
         setTimeout(()=>{
             body.classList.remove("over");
-        },1000);
+        },400);
         score = gameSeq.length;
         if(score >= highestScore){
             highestScore = score;
         }
         h2.innerHTML = `Game Over! Your <b>Score was : ${score} </b> <br> Press any key to start a new game<br><b>Highest score is : ${highestScore}</b>`;
-        reset();
+        setTimeout(reset,1000);
     }
 }
 function reset(){
