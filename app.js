@@ -68,7 +68,7 @@ function checkBtn(idx){
         if(score >= highestScore){
             highestScore = score;
         }
-        h2.innerHTML = `Game Over! Your <b>Score was : ${score} </b> <br> Press any key to start a new game<br><b>Highest score is : ${highestScore}</b>`;
+        h2.innerHTML = `Game Over! Your <b>Score was : ${score} </b> <br> Press any key to start the Game or press on the white screen <br> <b>Highest score is : ${highestScore}</b>`;
         setTimeout(reset,1000);
     }
 }
